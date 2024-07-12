@@ -1,5 +1,3 @@
-
-
 export const buttons = [
     { "Muscle":"Deltoids", },
     { "Muscle": "Biceps", } ,
