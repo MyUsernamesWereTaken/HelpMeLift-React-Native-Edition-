@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <SafeAreaView style={{flex:1, backgroundColor:"#232023"}}>
       <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
-        <StatusBar backgroundColor={"#333333"} barStyle={"dark-content"}/>
+        <StatusBar backgroundColor={"darkred"} barStyle={"light-content"}/>
 
         <Text style={styles.heading}>HelpMeLift</Text>
 

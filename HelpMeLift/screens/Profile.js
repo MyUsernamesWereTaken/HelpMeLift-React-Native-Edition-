@@ -2,7 +2,7 @@
 
 
 
-export default function Profil(){
+export default function Profile(){
 
     // return(
 
