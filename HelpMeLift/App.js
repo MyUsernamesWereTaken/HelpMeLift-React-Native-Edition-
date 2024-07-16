@@ -18,10 +18,11 @@ export default function App(){
 
       <Tab.Navigator
         screenOptions={({ route }) => ({
+          headerShown:false,
           tabBarStyle: { backgroundColor: "#000000"},
           tabBarInactiveTintColor: "red",
           tabBarActiveTintColor: "#51A9C3",
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ focused, color }) => {
             let iconName;
             if (route.name === "Home") {
               iconName = focused ? "barbell" : "barbell-outline";
@@ -32,7 +33,7 @@ export default function App(){
             } else if (route.name === "Profile") {
               iconName = focused ? "person" : "person-outline";
             }
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <Ionicons name={iconName} size={25} color={color} />;
           },
         })}>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal, useWindowDimensions, SafeAreaView, FlatList } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal, useWindowDimensions, SafeAreaView, FlatList, VirtualizedList } from 'react-native';
 import { buttons, exercises } from "../dataFiles/constants";
 
 export default function Home() {
@@ -21,10 +21,12 @@ export default function Home() {
   return (
     <SafeAreaView style={{flex:1, backgroundColor:"#232023"}}>
       <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
-        <StatusBar backgroundColor={"darkred"} barStyle={"light-content"}/>
+        <StatusBar backgroundColor={"#232023"} barStyle={"light-content"}/>
 
-        <Text style={styles.heading}>HelpMeLift</Text>
-
+        <View>
+          <Text style={styles.heading}>HelpMeLift</Text>
+        </View>
+        
         <View>
             <FlatList data = {buttons}
             renderItem={({ item, index }) =>{
@@ -39,7 +41,7 @@ export default function Home() {
 
         <Modal visible={isModalVisible} onRequestClose={() => setIsModalVisible(false)} animationType="slide">
 
-          <View style={{flex: 1, backgroundColor: "#333333", padding: 60}}>
+          <View style={{flex: 1, backgroundColor: "#333333"}}>
             <FlatList data={selectedExercises} ListHeaderComponent = {<Text style={styles.modalHeading}>{selectedTitle}</Text>} keyExtractor={(item, index) => index.toString()} 
               renderItem={({ item, index }) => {
                 return(
@@ -64,14 +66,15 @@ export default function Home() {
     },
     button: {
       backgroundColor: "crimson",
-      padding: 10.5,
+      padding: 10,
       borderRadius: 5,
       marginVertical: 5,
       alignItems: 'center',
     },
     buttonText: {
       color: "#232023",
-      fontSize: 16,
+      fontSize: 12,
+      fontWeight:"bold",
     },
     modalHeading: {
       color: "crimson",
