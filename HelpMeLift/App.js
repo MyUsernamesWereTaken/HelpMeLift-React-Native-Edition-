@@ -1,9 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "./Screens/HomeStack/Home";
-import Journal from "./Screens/Journal";
-import Plan from "./Screens/Plan";
-import Profile from "./Screens/Profile";
+import Home from "./screens/HomeStack/Home";
+import Journal from "./screens/Journal";
+import Plan from "./screens/Plan";
+import Profile from "./screens/Profile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { InitialStack } from "./Stack";
 
