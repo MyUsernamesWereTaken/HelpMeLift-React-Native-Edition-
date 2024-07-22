@@ -1,6 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "./screens/HomeStack/Home";
 import Journal from "./screens/Journal";
 import Plan from "./screens/Plan";
 import Profile from "./screens/Profile";
@@ -36,7 +35,7 @@ export default function App(){
           },
         })}>
 
-        <Tab.Screen name="Home" component={Home}/>
+        <Tab.Screen name="Home" component={InitialStack}/>
         <Tab.Screen name="Journal" component={Journal}/>
         <Tab.Screen name="My Plan" component={Plan}/>
         <Tab.Screen name="Profile" component={Profile}/>
