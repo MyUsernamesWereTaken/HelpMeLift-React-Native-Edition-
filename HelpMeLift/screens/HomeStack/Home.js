@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal, useWindowDimensions, SafeAreaView, FlatList, VirtualizedList } from 'react-native';
-import { buttons, exercises } from "../dataFiles/constants";
+import { buttons, exercises } from "../../dataFiles/constants";
 
 export default function Home() {
 
