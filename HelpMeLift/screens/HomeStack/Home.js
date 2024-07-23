@@ -3,7 +3,7 @@ import { buttons } from "../../dataFiles/constants";
 
 export default function Home({ navigation }) {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#232023" }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar backgroundColor={"#232023"} barStyle={"light-content"} />
       
       <View>

@@ -33,7 +33,10 @@ export default function App(){
             }
             return <Ionicons name={iconName} size={25} color={color} />;
           },
-        })}>
+          contentStyle:{
+            backgroundColor:"#333333",
+          }
+          })}>
 
         <Tab.Screen name="Home" component={InitialStack}/>
         <Tab.Screen name="Journal" component={Journal}/>
